@@ -3,7 +3,7 @@
   <h1>Bakaweb Timetable Extractor</h1>
 
   ![GitHub License](https://img.shields.io/github/license/MortikCZ/Bakaweb-Timetable-Extractor)
-  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/MortikCZ/Bakaweb-Timetable-Extractorh)
+  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/MortikCZ/Bakaweb-Timetable-Extractor)
   ![GitHub last commit](https://img.shields.io/github/last-commit/MortikCZ/Bakaweb-Timetable-Extractor)
 
   <p>Jednoduchý nástroj pro extrakci rozvrhu z modulu Timetable Bakawebu. Data jsou získavána v HTML formátu a následně zpracována do JSON formátu.</p>
