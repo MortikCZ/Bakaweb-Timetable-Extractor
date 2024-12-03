@@ -11,6 +11,8 @@
 </div>
 <h2 align = "center">Použití</h2>
 
+<b>UPOZORNĚNÍ! Administrátor systému Bakaláři má možnost ve veřejném Timetable nastavit možnost zobrazení suplování, pouze v případě platného přihlášení. V takovém případě nástroj neumožňuje získávání informací o změnách v rozvrhu.</b>
+
 Funkce `get_timetable` má dva povinné parametry:
 - `url` - URL adresa rozvrhu
 - `output_file` - název souboru, do kterého se uloží rozvrh.
