@@ -11,27 +11,29 @@
 </div>
 <h2 align = "center">Použití</h2>
 
-<b>UPOZORNĚNÍ! Administrátor systému Bakaláři má možnost ve veřejném rozvrhu nastavit možnost zobrazení suplování, pouze v případě platného přihlášení. V takovém případě nástroj neumožňuje získávání informací o změnách v rozvrhu.</b>
+**Je zapotřebí předávat funkcím vždy i přihlašovací údaje do IS Bakaláři, v některých situacích může totiž nastat to, že pokud není program přihlášen na stránce s rozvrhem, nebude mu poskytnut kompletní rozvrh včetně změn v rozvrhu ale pouze stálý rozvrh.**
 
-Funkce `get_timetable` má dva povinné parametry:
-- `url` - URL adresa rozvrhu
-- `output_file` - název souboru, do kterého se uloží rozvrh.
-
-Vrací rozvrh ve formátu JSON.
-
-Funkce `get_substitutions` má dva povinné parametry:
-- `url` - URL adresa rozvrhu
-- `output_file` - název souboru, do kterého se uloží změny.
-
-Vrací změny v rozvrhu ve formátu JSON.
+### Funkce 
+`get_timetable` - vrátí kompletní rozvrh v JSON formátu.
+`get_substitutions` - vrátí pouze změny v rozvrhu v JSON formátu.
+- parametry
+  - `login_url` - přihlašovací stránka do IS Bakaláři. (např. https://bakalari.skola.cz/bakaweb/login)
+  - `timetable_url` - URL rozvrhu (např. https://bakalari.skola.cz/bakaweb/Timetable/Public/Next/Class/4U)
+  - `username` - přihlašovací jméno
+  - `password` - přihlašovací heslo 
 
 ### Příklad použití
 ```python
 import extractor
 
-url = "https://bakalari.skola.cz/bakaweb/Timetable/Public/Permanent/Class/4U"
-output_file = "timetable.json"
-extractor.get_timetable(url, output_file)
+login_url = "https://bakalari.skola.cz/bakaweb/login"
+timetable_url = "https://bakalari.skola.cz/bakaweb/Timetable/Public/Next/Class/4U"
+username = "user"
+password = "user"
+
+output = app.get_substitutions(login_url, timetable_url, username, password)
+
+print(output)
 ```
 
 ### Výstup
