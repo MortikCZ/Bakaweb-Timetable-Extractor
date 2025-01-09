@@ -15,6 +15,7 @@
 
 ### Funkce 
 `get_timetable` - vrátí kompletní rozvrh v JSON formátu.
+
 `get_substitutions` - vrátí pouze změny v rozvrhu v JSON formátu.
 - parametry
   - `login_url` - přihlašovací stránka do IS Bakaláři. (např. https://bakalari.skola.cz/bakaweb/login)
