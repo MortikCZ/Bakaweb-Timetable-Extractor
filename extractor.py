@@ -24,7 +24,9 @@ def login_to_bakalari(username, password, login_url):
         login_data["__RequestVerificationToken"] = csrf_token_value
 
     response = session.post(login_url, data=login_data)
-    if "Přihlásit" in response.text:
+    soup = BeautifulSoup(response.text, "html.parser")
+    error_label = soup.find("label", text="Špatný login nebo heslo.")
+    if error_label or response.status_code != 200:
         print("Přihlášení selhalo. Zkontrolujte své přihlašovací údaje.")
         return None
 
